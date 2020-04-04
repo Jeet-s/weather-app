@@ -4,15 +4,15 @@ const geoCode = require('./utils/geoCode');
 const forcast = require('./utils/forcast');
 
 if (process.argv[2]) {
-    geoCode.getGeoCode(process.argv[2], (error, data) => {
+    geoCode.getGeoCode(process.argv[2], (error, {latitude, longitude, location}) => {
         if (error) {
             console.log('Error Fetching data');
         } else {
-            forcast.getForcast(data.latitude, data.longitude, (error, forcastData) => {
+            forcast.getForcast(latitude, longitude, (error, {temp}) => {
                 if (error) {
                     console.log('Error Fetching data')
                 } else {
-                    console.log(`It is currently ${forcastData.main.temp} degree Celsius in ${data.location}`);
+                    console.log(`It is currently ${temp} degree Celsius in ${location}`);
                 }
             })
         }
