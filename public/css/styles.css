@@ -40,3 +40,39 @@ header a {
 .portrait {
     width: 250px;
 }
+
+button {
+    padding: 8px 16px;
+    background-color: #333333;
+    border: none;
+    color: #ffffff;
+    cursor: pointer;
+    outline: none;
+}
+
+button:hover {
+    background-color: #222222;
+}
+
+input{
+    padding: 8px 16px;
+    border: 1px solid #bdbdbd;
+    outline: none;
+}
+
+input:focus{
+    border: 1px solid #000000
+}
+
+.error {
+    color: rgb(255, 60, 60);
+}
+
+.temp {
+    font-size: 80px;
+    color: rgb(0, 141, 99);
+}
+
+.location {
+    font-size: 30px;
+}
