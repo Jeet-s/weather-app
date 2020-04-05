@@ -9,7 +9,7 @@ const url = `http://api.openweathermap.org/data/2.5/weather?lat=${encodeURICompo
         } else if (responseError){
             callback(responseError, undefined);
         } else {
-            callback(undefined, body.main);
+            callback(undefined, body);
         }
     });
 }
